@@ -7,6 +7,7 @@ export default function RegisterForm({ setNewUser }) {
     const { signUp } = useAuth();
     const nav = useNavigate();
     const [formData, setFormData] = useState({
+        id: "",
         name: "",
         email: "",
         password: "",
@@ -21,9 +22,9 @@ export default function RegisterForm({ setNewUser }) {
         try {
             if (formData.password !== formData.password2) throw new Error("Password doesnt match")
 
-                await signUp(formData);
+            await signUp(formData);
 
-                nav('/dash')
+            nav('/dash')
         } catch (err) {
             console.log(err.message)
 
@@ -37,6 +38,17 @@ export default function RegisterForm({ setNewUser }) {
         <div className="forms">
             <h2>Register</h2>
             <form onSubmit={handleSubmit}>
+                <label>
+                    id:
+                    <input
+                        type="number"
+                        name="id"
+                        value={formData.id}
+                        onChange={handleChange}
+                        placeholder="id"
+                    />{" "}
+                </label>
+
                 <label>
                     Name:
                     <input

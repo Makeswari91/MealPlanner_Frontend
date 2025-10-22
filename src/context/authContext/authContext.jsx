@@ -10,7 +10,7 @@ export default function AuthProvider({ children }) {
     const connStr = 'http://localhost:3000/api'
 
     async function signUp(formData) {
-        let res = await axios.post(`${connStr}/users`, formData);
+        let res = await axios.post(`${connStr}/auth/register`, formData);
 
 
         setCookies('token', res.data.token);
@@ -18,7 +18,8 @@ export default function AuthProvider({ children }) {
     }
 
     async function login(formData) {
-        let res = await axios.post(`${connStr}/register`, formData);
+        console.log(formData)
+        let res = await axios.post(`${connStr}/auth/signin`, formData);
 
 
         setCookies('token', res.data.token);
@@ -26,7 +27,7 @@ export default function AuthProvider({ children }) {
     }
 
     async function logout() {
-        ['token'].foreach((token) => removeCookie(token));
+        ['token'].forEach((token) => removeCookie(token));
     }
 
     const value = useMemo(() => ({
