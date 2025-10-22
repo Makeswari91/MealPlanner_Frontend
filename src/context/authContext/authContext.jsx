@@ -7,7 +7,7 @@ const AuthContext = createContext();
 export default function AuthProvider({ children }) {
     const [cookies, setCookies, removeCookie] = useCookies();
 
-    const connStr = "http://localhost:3000/api"
+    const connStr = 'http://localhost:3000/api'
 
     async function signUp(formData) {
         let res = await axios.post(`${connStr}/users`, formData);
@@ -18,7 +18,7 @@ export default function AuthProvider({ children }) {
     }
 
     async function login(formData) {
-        let res = await axios.post(`${connStr}/auth`, formData);
+        let res = await axios.post(`${connStr}/register`, formData);
 
 
         setCookies('token', res.data.token);

@@ -18,7 +18,7 @@ export default function LoginForm({ setNewUser }) {
                         type="password"
                         name="password"
                         placeholder="Password"
-                        minlength="6" />
+                        minLength="6" />
                 </label>{""}
                 <input type="submit" value="Log In" />
             </form>
