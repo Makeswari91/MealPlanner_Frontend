@@ -9,6 +9,8 @@ import RecipePage from "./pages/RecipePage/RecipePage";
 import MealplanPage from "./pages/MealplanPage/MealplanPage";
 import GrocerylistPage from "./pages/GrocerylistPage/GrocerylistPage";
 
+//components
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
 
@@ -17,10 +19,13 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/auth" element={<AuthPage />} />
+
+        <Route element={<ProtectedRoute />}>
         <Route path="/dash" element={<DashboardPage />} />
         <Route path="/recipe" element={<RecipePage />} />
         <Route path="/mealplan" element={<MealplanPage />} />
         <Route path="/grocerylist" element={<GrocerylistPage />} />
+        </Route>
       </Routes>
 
     </>
