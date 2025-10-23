@@ -1,0 +1,11 @@
+.auth {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://t4.ftcdn.net/jpg/02/73/35/71/360_F_273357123_dhP8oZJALDVHCu9GU48XJPXisqheXf91.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: left;
+    position: relative;
+}

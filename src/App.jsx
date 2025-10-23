@@ -17,8 +17,9 @@ function App() {
 
   return (
     <>
-      <Nav />
+          <Nav />
       <main>
+
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/auth" element={<AuthPage />} />

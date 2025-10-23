@@ -4,14 +4,10 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: var(--blue);
-  color: var(--babyBlue);
-}
-
-*::after,
-*,
-*::before {
-  box-sizing: inherit;
+  background-color: var(--yello);
+  background-size: cover;
+  background-image: url('https://img.freepik.com/premium-photo/abstract-food-background-with-ingredients-such-as-fruits-vegetables-spices_124463-5047.jpg?w=2000');
+  color: black;
 }
 
 :root {
@@ -20,4 +16,10 @@ body {
   --babyBlue: #3F88C5;
   --blue: #032B43;
   --pineGreen: #1ccb1ccf;
+}
+
+*::after,
+*,
+*::before {
+  box-sizing: inherit;
 }
