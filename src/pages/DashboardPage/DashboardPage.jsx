@@ -1,5 +1,7 @@
 import {useAuth} from "../../context/authContext/authContext";
 import { useNavigate } from "react-router-dom";
+import style from "../../components/AuthForms/Forms.module.css";
+
 
 export default function DashboardPage(){
     const {logout} = useAuth();
@@ -12,7 +14,7 @@ export default function DashboardPage(){
     return(
     <>
      <h1>Dashboard Page</h1>
-     <button onClick={handleLogout}>Logout</button>
+     <button className={style.forms} onClick={handleLogout}>Logout</button>
 
 </>
     )

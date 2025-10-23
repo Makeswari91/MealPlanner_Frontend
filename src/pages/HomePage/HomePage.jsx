@@ -1,3 +1,9 @@
 export default function HomePage(){
-    return <h1>Home Page</h1>
-}
+    return( 
+    <>
+    <h1>Meal Map</h1>
+    <h2>
+        Plan Smart. Eat Better.
+    </h2>
+    </>
+)}

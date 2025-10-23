@@ -11,23 +11,26 @@ import GrocerylistPage from "./pages/GrocerylistPage/GrocerylistPage";
 
 //components
 import ProtectedRoute from './components/ProtectedRoute';
+import Nav from "./components/Nav/Nav";
 
 function App() {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/auth" element={<AuthPage />} />
+      <Nav />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/auth" element={<AuthPage />} />
 
-        <Route element={<ProtectedRoute />}>
-        <Route path="/dash" element={<DashboardPage />} />
-        <Route path="/recipe" element={<RecipePage />} />
-        <Route path="/mealplan" element={<MealplanPage />} />
-        <Route path="/grocerylist" element={<GrocerylistPage />} />
-        </Route>
-      </Routes>
-
+          <Route element={<ProtectedRoute />}>
+            <Route path="/dash" element={<DashboardPage />} />
+            <Route path="/recipe" element={<RecipePage />} />
+            <Route path="/mealplan" element={<MealplanPage />} />
+            <Route path="/grocerylist" element={<GrocerylistPage />} />
+          </Route>
+        </Routes>
+      </main>
     </>
   )
 }

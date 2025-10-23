@@ -33,7 +33,7 @@ export default function LoginForm({ setNewUser }) {
         setNewUser(true);
     };
     return (
-        <div className="forms">
+        <div className={style.forms}>
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <label>

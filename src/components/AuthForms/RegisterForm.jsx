@@ -35,7 +35,7 @@ export default function RegisterForm({ setNewUser }) {
         setNewUser(false);
     }
     return (
-        <div className="forms">
+        <div className={style.forms}>
             <h2>Register</h2>
             <form onSubmit={handleSubmit}>
                 <label>
