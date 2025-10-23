@@ -95,8 +95,9 @@ export default function MealPlanPage() {
 
     return (
         <div className={style.container}>
-            <h2>Create Meal Plan</h2>
+            
             <form className={style.form} onSubmit={handleSubmit}>
+                <h2>Create Meal Plan</h2>
                 <input
                     name="userId"
                     value={formData.userId}
@@ -134,8 +135,9 @@ export default function MealPlanPage() {
                 <button type="submit">Save Meal Plan</button>
             </form>
 
-            <h2>Existing Meal Plans</h2>
+            
             <ul className={style.list}>
+                <h2>Existing Meal Plans</h2>
                 {mealPlans?.map((plan) => (
                     <li key={plan._id} className={style.item}>
                         <p><strong>User:</strong> {getUserName(plan.userId)}</p>
