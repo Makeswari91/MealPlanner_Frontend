@@ -14,9 +14,9 @@ export default function Nav() {
       <Link to={"/"}>
         <h3>Home</h3>
       </Link>
-          {/* <Link to={"/dash"}>
+          <Link to={"/dash"}>
             <h3>Dashboard</h3>
-          </Link> */}
+          </Link>
           <Link to={"/recipe"}>
             <h3>Recipe</h3>
           </Link>
@@ -26,9 +26,6 @@ export default function Nav() {
             <Link to={"/auth"}>
             <h3>Login/Signup</h3>
           </Link>
-          <a>
-            <h3 onClick={handleLogout}>Logout</h3>
-          </a>
     </nav>
   )
 }
