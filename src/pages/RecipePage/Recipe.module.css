@@ -1,0 +1,16 @@
+.container {
+width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: .1rem;
+    position: relative;
+    flex: 0}
+.recipeList {
+  list-style: none;
+  padding: 0;
+}
+.recipeItem {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
