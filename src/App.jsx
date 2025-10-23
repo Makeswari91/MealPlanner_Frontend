@@ -24,7 +24,7 @@ function App() {
           <Route path="/auth" element={<AuthPage />} />
 
           <Route element={<ProtectedRoute />}>
-            <Route path="/dash" element={<DashboardPage />} />
+            {/* <Route path="/dash" element={<DashboardPage />} /> */}
             <Route path="/recipe" element={<RecipePage />} />
             <Route path="/mealplan" element={<MealplanPage />} />
             <Route path="/grocerylist" element={<GrocerylistPage />} />
